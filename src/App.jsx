@@ -1,12 +1,14 @@
 import "./App.css";
+import Content from "./components/partials/Content";
+import Search from "./components/search/Search";
 
 function App() {
   return (
     <>
-      <div>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution
+      <div className="container">
+        <Content></Content>
+
+        <Search></Search>
       </div>
     </>
   );
