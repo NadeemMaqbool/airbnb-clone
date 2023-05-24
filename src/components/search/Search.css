@@ -7,10 +7,12 @@
     border-radius: 8px;
     border: 1px solid #E7E7E9;
     width: 60%;
-    height: 10rem;
-    padding: 2rem;
+    height: 8rem;
+    padding: 1rem;
     font-size: 1.1rem;
     color: var(--main-font-color);
+    /* add box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-form
@@ -28,9 +30,11 @@
     border: none;
     outline: none;
     font-size: 1.1rem;
-    color: var(--main-font-color);
+    color: var(--main-font-color) !important;
     border: 1px solid var(--light-color);
     padding: 10px 25px;
+    border-radius: 8px;
+    margin-right:5px;
 }
 
 .search-form-group .form-in {
@@ -41,6 +45,16 @@
     color: var(--main-font-color);
     border: 1px solid var(--light-color);
     padding: 10px 25px;
+    border-radius: 8px;
+    margin-left:5px;
+}
+
+.form-in:hover {
+    border: 1px solid var(--main-blue-color);
+}
+
+.form-input:hover {
+    border: 1px solid var(--main-blue-color);
 }
 
 .search-form-group button {
@@ -53,16 +67,16 @@
     color: var(--light-color);
     border: 1px solid var(--main-button-color);
     padding: 10px 25px;
-}
-
-.search-input {
-   // position: fixed;
+    border-radius: 8px;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .search-punchline {
     font-size: 1.3rem;
     color: var(--headings-font-color);
     margin-top: 0.5rem;
+    font-weight: 500;
 }
 
 .search-autocomplete {
@@ -74,7 +88,6 @@
 }
 
 .search-item {
-    border: 1px solid var(--light-color);
     background: #fff;
     width: 23.1rem;
 }
@@ -84,9 +97,21 @@
     color: var(--main-font-color);
     padding: 0.5rem 0.5rem;
     cursor: pointer;
+    border-left: 1px solid var(--light-color);
+    border-right: 1px solid var(--light-color);
+    border-left: 1px solid var(--light-color);
 }
-
+.search-item-name:first-child {
+    padding-top: 1.1rem;
+}
+.search-item-name:last-child {
+    border-bottom: 1px solid var(--light-color);
+}
 .city-name {
     color: var(--headings-font-color);
     font-weight: 500;
+}
+
+.disabled {
+    opacity: 0.5;
 }

@@ -1,12 +1,14 @@
 import "./Header.css";
+import logo from "../../assets/logo_fp.png";
 
 const Header = () => {
   return (
     <div className="h-container">
       <div className="header-container">
         <div className="main-logo">
-          <img src="#" alt="" />
-          Funpedia Group
+          <a href="/">
+            <img src={logo} alt="Funpedia" className="logo-container" />
+          </a>
         </div>
         <div className="header-nav">
           <ul className="nav-group">
@@ -24,7 +26,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="main-settings">Settings</div>
+        <div className="main-settings">Sign In</div>
       </div>
     </div>
   );
