@@ -2,6 +2,8 @@
     --main-font-color: #71717A;
     --headings-font-color: #191C24;
     --secondry-font-color: #CFCFD3;
+    --light-color: #CFCFD3;
+    --main-button-color: #1A153D;
 }
 body {
     font-family: 'Poppins', sans-serif;
