@@ -10,13 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.5.1",
     "cities.json": "^1.1.20",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-select": "^5.7.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@types/react": "^16.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.38.0",

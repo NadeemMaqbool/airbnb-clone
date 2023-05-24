@@ -3,8 +3,25 @@
     --headings-font-color: #191C24;
     --secondry-font-color: #CFCFD3;
     --light-color: #CFCFD3;
+    --ext-light-color: #F3F4F7;
     --main-button-color: #1A153D;
+    --main-blue-color: #4096ff;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--light-color);
+    opacity: 1; /* Firefox */
+    font-size:15px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+
 body {
     font-family: 'Poppins', sans-serif;
 }
