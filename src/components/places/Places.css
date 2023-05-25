@@ -1,0 +1,28 @@
+.search-list {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    position: absolute;
+    border-radius: 8px;
+    z-index: 0;
+    top:200px;
+    max-width: 71%;
+    display: flex;
+    flex-direction: row;
+}
+
+.places-container {
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    font-size: 1.1rem;
+    
+}
+
+.filter-side {
+    width: 35%;
+}
+
+.search-results {
+    width: 100%;
+}
