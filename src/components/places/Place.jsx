@@ -1,11 +1,11 @@
 import "./Place.css";
-
+import imgPlace from "../../assets/img1.jpg";
 const Place = () => {
   return (
     <div className="places-list">
       <div className="places-list__item">
         <div className="places-list__item__image">
-          <img src="https://via.placeholder.com/150" alt="place" />
+          <img src={imgPlace} alt="place" className="places-list_img"/>
         </div>
         <div className="places-list__item__info">
           <div>
