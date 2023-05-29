@@ -6,6 +6,10 @@ const PlaceList = () => {
       <Place> </Place>
       <Place> </Place>
       <Place> </Place>
+      <Place> </Place>
+      <Place> </Place>
+      <Place> </Place>
+      <Place> </Place>
     </div>
   );
 };

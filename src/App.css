@@ -32,9 +32,7 @@ body {
     justify-content: center;
     width: 100%;
     background-color: #fff;
-    position: fixed;
-    top: 150px;
-    left: 0;
-    z-index: 100;
+    position: absolute;
+    top: 105px;
     border-radius: 10px;
 }
