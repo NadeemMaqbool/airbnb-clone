@@ -2,17 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom:20px;    
+    margin-bottom:8px;    
 }
 
 .places-list__item {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 150px;
+    border: 1px solid 1px solid #E7E7E9;
+    border-radius: 8px;
     font-size: 1.1rem;
     color: var(--main-font-color);
     /* add box shadow */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .places-list__item:hover {
@@ -48,41 +52,40 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 7px;
 }
 
 
 .places-list__item__info__title {
     padding-top: 7px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--headings-font-color);
     font-weight: 600;
 }
 
 .places-list__item__info__detail {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--headings-font-color);
     font-weight: 300;
 }
 
 .places-list__item__info__perks{
     padding-top: 7px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 300;
 
 }
 
 .place-list__item__subinfo__rating {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 300;
-    padding-bottom: 7px;
     display: flex;
     align-items: flex-end;
 }
 
 .place-list__item__subinfo__price {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    padding-bottom: 7px;
     color: #303646;
     display: flex;
     flex-direction: column;
@@ -90,7 +93,7 @@
 }
 
 .place-list__item__subinfo__price__detail {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #303646;
 }
