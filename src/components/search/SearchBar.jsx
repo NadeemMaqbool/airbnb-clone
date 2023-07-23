@@ -2,8 +2,11 @@ import "./Search.css";
 import cities from "cities.json";
 import { useState } from "react";
 import DateInput from "./DateInput";
+import axios from "axios"
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const {places, setPlaces} = props
+
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedDates, setSelectedDates] = useState(null);
   const [isValidForm, setIsValidForm] = useState(true);
@@ -16,15 +19,26 @@ const SearchBar = () => {
     setSelectedDates(dateValues);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (selectedCity != "" && selectedDates != null) {
-      setIsValidForm(false);
-      console.log("Form is valid");
+    if (selectedCity === "" && selectedDates === null) {
+      return false
     }
-    console.log(e.target);
-  };
-
+    
+    const checkIn = selectedDates[0]
+    const checkOut = selectedDates[1]
+    
+    await axios.post('http://localhost:8080/api/search/place', {
+        location: selectedCity,
+        checkIn: checkIn,
+        checkOut: checkOut
+      }).then((response) => {
+        const resp = response.data
+        setPlaces(resp)
+      })
+      .catch(err => console.error(err))
+  }
+  
   return (
     <form onSubmit={handleSubmit}>
       <div className="search-form">
@@ -67,16 +81,15 @@ const SearchBar = () => {
           <DateInput getDates={getDates}></DateInput>
         </div>
         <div className="search-form-group">
-          <input className="form-in" type="number" placeholder="Guests" />
+          <input className="form-in" type="number" placeholder="Guests" min="1"/>
         </div>
         <div className="search-form-group">
-          <input className="form-in" type="number" placeholder="Rooms" />
+          <input className="form-in" type="number" placeholder="Rooms" min='1'/>
         </div>
         <div
-          className={`search-form-group ${isValidForm ? "disabled" : ""}`}
-          disabled={isValidForm}
+          className="search-form-group"
         >
-          <button>Search {isValidForm}</button>
+          <button type="submit">Search</button>
         </div>
       </div>
     </form>

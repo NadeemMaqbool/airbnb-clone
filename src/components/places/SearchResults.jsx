@@ -1,12 +1,34 @@
 import "./Places.css";
 import PlaceList from "./PlacesList";
+import {useState, useEffect} from 'react'
+import axios from 'axios'
+import Loading from '../Loader/Loader.jsx'
 
-const SearchResults = () => {
+const SearchResults = (props) => {
+  const {places, setPlaces} = props
+  
+  useEffect(() => {
+    const getPlaces = async () => {
+      await axios.get("http://localhost:8080/api/places")
+        .then(
+          (response) => { 
+            const data = response.data
+            places?.length > 0 ? setPlaces(...places, data) : setPlaces(data)
+          })
+        .catch(err => {
+          console.log(err)
+        })
+      }
+    getPlaces()
+  }, [])  
+
   return (
     <div className="search-list">
       <div className="filter-side">Search Filters</div>
       <div className="search-results">
-        <PlaceList></PlaceList>
+        
+        <PlaceList places={places}/>
+        
       </div>
     </div>
   );

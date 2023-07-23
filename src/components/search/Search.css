@@ -38,7 +38,7 @@
 }
 
 .search-form-group .form-in {
-    width: 5rem;
+    width: 3rem;
     height: 100%;
     outline: none;
     font-size: 1.1rem;
@@ -89,7 +89,8 @@
 
 .search-item {
     background: #fff;
-    width: 23.1rem;
+    width: 23.3rem;
+    z-index: 100;
 }
 
 .search-item-name {

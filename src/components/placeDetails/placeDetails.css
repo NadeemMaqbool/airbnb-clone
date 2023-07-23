@@ -1,0 +1,99 @@
+.container-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.room p {
+    margin: 0;
+    padding: 0;
+}
+.room-info {
+    font-size: 13px;
+}
+
+.room-price {
+    font-weight: 600;
+    color: #02A069;
+}
+.single-room {
+    margin-bottom: 1rem;
+}
+
+.focus {
+    font-weight: 600
+}
+.image-container img{
+    width: 800px;
+    height: 450px !important;
+}
+
+.tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+  }
+  
+.tabs-link {
+    background: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 104px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.tabs-link:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.active-tab {
+    background: white;
+    border-bottom: 3px solid red;
+    font-weight: 600;
+}
+
+.content-tabs {
+    flex-grow : 1;
+}
+
+.content-part {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .active-content {
+    display: block;
+  }
+
+  .place-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 730px;
+    font-size: 14px;
+  }
+
+  .single-amenity {
+    padding: 3px 10px;
+    margin-right: 10px;
+    background: #D5FEF3;
+    border-radius: 15px;
+    border: 0.5px solid #05FEBA;
+    font-size: 12px;
+  }
+
+  .place-desc p {
+    margin: 0;
+    padding: 1px;
+    font-size: 14px;
+  }

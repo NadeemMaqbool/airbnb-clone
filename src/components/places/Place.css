@@ -34,7 +34,7 @@
 }
 
 .places-list__item__image {
-    width: 35%;
+    width: 32%;
     height: 5%;
 }
 
@@ -64,22 +64,26 @@
 
 .places-list__item__info__title {
     padding-top: 7px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--headings-font-color);
     font-weight: 600;
 }
 
 .places-list__item__info__detail {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--headings-font-color);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .places-list__item__info__perks{
     padding-top: 7px;
-    font-size: 0.8rem;
-    font-weight: 300;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #394d44;
+}
 
+.places-list__item__info__perks span {
+    margin-right: 2px;
 }
 
 .place-list__item__subinfo__rating {
@@ -90,8 +94,8 @@
 }
 
 .place-list__item__subinfo__price {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #303646;
     display: flex;
     flex-direction: column;

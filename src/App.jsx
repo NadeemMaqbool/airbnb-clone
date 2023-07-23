@@ -1,15 +1,19 @@
 import "./App.css";
 import Content from "./components/partials/Content";
-import Search from "./components/search/Search";
-import SearchResults from "./components/places/SearchResults";
+import {Routes, Route} from 'react-router-dom';
+import Home from "./components/Home/Home";
+import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 
 function App() {
   return (
     <>
       <div className="container">
         <Content></Content>
-        <Search></Search>
-        <SearchResults></SearchResults>
+        <Routes>
+          <Route path = "/" element={<Home />}/>
+          <Route path = "/place/:id" element={<PlaceDetails />} />
+        </Routes>
+        
       </div>
     </>
   );
