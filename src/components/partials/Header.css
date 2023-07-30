@@ -44,17 +44,18 @@
     color: var(--headings-font-color);
     cursor: pointer;
 }
-.nav-group li {
-    list-style: none;
-    font-weight: 500;
-}
 
-.nav-group li a {
+.nav-group-item{
     text-decoration: none;
     color: var(--main-font-color);
     font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
+    padding: 10px 20px;
+}
+
+.nav-group-item:hover{
+    background-color: #F7F7F7;
 }
 
 .main-settings {
@@ -64,5 +65,6 @@
     font-weight: 500;
     cursor: pointer;
 }
+
 
 

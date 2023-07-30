@@ -97,3 +97,24 @@
     padding: 1px;
     font-size: 14px;
   }
+
+  .SaveButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } 
+  .button-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--main-button-color);
+    color: #fff;
+    border: 1px solid var(--main-button-color);
+    font-size: 18px;
+    border-radius: 10px;
+  }

@@ -1,5 +1,6 @@
 import "./Header.css";
 import logo from "../../assets/logo_fp.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,22 +12,10 @@ const Header = () => {
           </a>
         </div>
         <div className="header-nav">
-          <ul className="nav-group">
-            <li className="nav-group-item">
-              <a href="#">English</a>
-            </li>
-            <li className="nav-group-item">
-              <a href="#">List your property</a>
-            </li>
-            <li className="nav-group-item">
-              <a href="#">Trips</a>
-            </li>
-            <li className="nav-group-item">
-              <a href="#">Support</a>
-            </li>
-          </ul>
+          <Link to="/properties" className="nav-group-item">List your property</Link>
+          <Link to='/signin' className="nav-group-item" > Login </Link>
+          <Link to='/signup' className="nav-group-item"> Register </Link>
         </div>
-        <div className="main-settings">Sign In</div>
       </div>
     </div>
   );

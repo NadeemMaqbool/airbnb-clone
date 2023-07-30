@@ -12,6 +12,7 @@
   "dependencies": {
     "antd": "^5.5.1",
     "cities.json": "^1.1.20",
+    "cookie-parser": "^1.4.6",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

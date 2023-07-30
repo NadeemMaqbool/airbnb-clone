@@ -19,14 +19,14 @@ const Place = (...place) => {
               
             </div>
             <div className="places-list__item__info__detail">
-              {description.slice(0, 150)}
+              {description.slice(0, 150) + '...'}
             </div>
             <div className="places-list__item__info__perks">
               {/* <FaHeart color="indianred" size={15} style={{marginRight:"5px"}}/> */}
               {
                 amenities && amenities.length > 0 ? (
                   amenities.slice(0,4).map((amenity, index) => {
-                    return <span key={amenity._id} style={{ textAlign: 'center' }}>
+                    return <span key={index} style={{ textAlign: 'center' }}>
                       {amenity.name} 
                       {amenities.slice(0, 4).length - 1  !== index ? ',' : ''} </span>; // Add return statement
                   }) 

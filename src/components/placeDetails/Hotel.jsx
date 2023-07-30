@@ -31,6 +31,11 @@ const Hotel = (...params) => {
       <div className="image-container">
         <img src={place?.image_url} alt="" />
       </div>
+      
+      <div className="SaveButton">
+        <button type="button" className="button-primary">Book This Place</button>
+      </div>
+
       <div className="place-container">
         <div className="tabs">
           <button
