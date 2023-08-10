@@ -1,0 +1,36 @@
+.container-menu {
+    min-width:15%;
+    background-color: #FBFBFB;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.list-item {
+    padding: 8px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #505763;
+    cursor: pointer;
+}
+
+.list-item span {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.list-item-text {
+    margin-top: 2px;
+}
+
+.dashboard-item {
+
+}

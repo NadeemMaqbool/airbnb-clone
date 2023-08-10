@@ -30,7 +30,7 @@
 .form-control {
     font-size: 16px;
     padding: 10px 12px;
-    margin-bottom: 10px;
+    
     border: 1px solid #BCBAB8;
     width: 250px;
 }
@@ -60,4 +60,23 @@
     margin-left: 55px;
     text-align: right;
     margin-top: 8px;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;  
+    margin-bottom: 10px;
+}
+.error-style {
+    margin-top: 2px;
+    font-size: 11px;
+    color: red;
 }

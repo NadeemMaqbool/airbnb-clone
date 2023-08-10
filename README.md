@@ -12,3 +12,10 @@ Goals:
 6. Login / Signup
 
 
+Admin Panel:
+- Rooms
+- Room Types
+- Places
+- Amenities
+- Users
+- Bookings
