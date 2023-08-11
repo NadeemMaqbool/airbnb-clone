@@ -43,6 +43,8 @@
     background-color: var(--main-button-color);
     color: var(--ext-light-color);
     border: 1px solid var(--main-button-color);
+    text-decoration: none;
+    text-align: center;
 }
 
 .form-heading {

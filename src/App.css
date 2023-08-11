@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 100px);
 }
 
 .container-footer {

@@ -1,0 +1,17 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.img-not-found {
+    width:400px;
+    height: auto;
+}
+
+.redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

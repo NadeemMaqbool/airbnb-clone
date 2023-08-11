@@ -8,11 +8,11 @@ import {useAuthContext} from "../../hooks/useAuthContext";
 const Header = () => {
   const {Logout}  = useSignout()
   const {user} = useAuthContext()
-  const navigate = useNavigate()
+
 
   const handleLogout = () => {
     Logout()
-    navigate("/signin")
+
   }
   return (
     <div className="h-container">

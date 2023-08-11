@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 const Header = () => {
   const {user, dispatch} = useAuthContext()
   
-  const email = JSON.parse(user).email
   const {Logout} = useSignout()
   const navigate = useNavigate()
 
@@ -15,13 +14,14 @@ const Header = () => {
     Logout()
     navigate("/signin")    
   }
+
   return (
     <div className="header-admin">
         <div className="header-nav">
             <img src={logo} alt="Admin Logo" className="logo"/>
         </div>
         <div className="header-nav settings">
-          <div className="setting-item">{email}</div>
+          <div className="setting-item">{user.email}</div>
           <button className="setting-item button" onClick={() => handleLogout()}>Logout</button>
         </div>
     </div>

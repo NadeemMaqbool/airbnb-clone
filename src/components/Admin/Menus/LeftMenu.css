@@ -1,6 +1,6 @@
 .container-menu {
-    min-width:15%;
-    background-color: #FBFBFB;
+    min-width:20%;
+    background-color: #F7F7F7;
 }
 
 .menu-items {
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: flex-start;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .list-item {
@@ -30,7 +30,12 @@
 .list-item-text {
     margin-top: 2px;
 }
+.link {
+    text-decoration: none !important;
+    color: #505763;
+}
 
-.dashboard-item {
-
+.dashboard-nav {
+    border-bottom: 1px solid #E7E7E7;
+    font-weight: 600;
 }

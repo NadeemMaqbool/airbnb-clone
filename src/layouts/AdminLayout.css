@@ -1,0 +1,24 @@
+.error-message {
+    padding: 9px 10px;
+    display: block;
+    font-size: 13px;
+    background: #FC86AA;
+    color: #DC0546;
+    border: 1.5px solid #FC86AA;
+    width: 250px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+  
+.success-message {
+    padding: 9px 10px;
+    display: block;
+    font-size: 13px;
+    background: #B1FBDE;
+    color: #0CF398;
+    border: 1.5px solid #B1FBDE;
+    width: 250px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+  

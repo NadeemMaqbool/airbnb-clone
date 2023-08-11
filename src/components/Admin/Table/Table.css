@@ -1,0 +1,68 @@
+.table-container {
+    padding: 5px;
+    color: #505763;
+    font-size: 13px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 11px;
+  }
+
+.table-row {
+  text-align: center;
+}
+
+.badge {
+  padding: 5px 17px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.badge-success {
+  background: #DBF9F1;
+  color: #40BF8E;
+}
+
+.badge-error {
+  background: #F9D6E0;
+  color: #D62965
+}
+
+.main-item {
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width: 100px;
+}
+
+.action-header {
+  width: 100px;
+}
+.action-btn {
+  background-color: transparent;
+  border: transparent;
+}
+
+.action-del {
+  color: #D62965;
+  cursor: pointer;
+}
+.action-edit {
+  color: #5125C2;
+  cursor: pointer;
+}

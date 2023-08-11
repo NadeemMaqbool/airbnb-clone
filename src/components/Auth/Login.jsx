@@ -1,20 +1,27 @@
 import "./Auth.css";
 import loginBg from "../../assets/login-bg.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSignin } from "../../hooks/useSignin";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const {SignIn, error, isLoading} = useSignin();
   const navigate = useNavigate()
-  
+  const {user} = useAuthContext() 
+
   const loginHandler = async (e) => {
     e.preventDefault();
     await SignIn({email, password})
-    navigate("/admin")
   };
+
+  useEffect(() => {
+    if (user) {
+      navigate("/admin")
+    }
+  }, [user])
 
   return (
     <>

@@ -1,3 +1,114 @@
 .dynamic-content {
-    width: 70%;
+    width: 75%;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border-color: bisque;
+    border-radius: 15px;    
+    margin-left:20px;
+    padding: 1px 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(240,237,240,1);
+    -moz-box-shadow: 0px 1px 5px 3px rgba(240,237,240,1);
+    box-shadow: 0px 1px 5px 3px rgba(240,237,240,1);
+}
+.title {
+    padding: 0px 20px;
+    flex: 1;
+}
+
+.text-eng {
+    font-size: 14px;
+    color: #868B8E
+}
+.people {
+    width: 20%;
+}
+
+.custom-icons {
+    color: #2D51D2; /* Change the color of the whole icon */
+}
+
+.custom-icons path {
+    fill: #2D51D2; /* Change the color of specific parts of the icon */
+}
+
+.custom-icons-hotel {
+    color: #D72848; /* Change the color of the whole icon */
+}
+
+.custom-icons-hotel path {
+    fill: #D72848; /* Change the color of specific parts of the icon */
+}
+
+.custom-icons-rev {
+    color: #EAB915; /* Change the color of the whole icon */
+}
+
+.custom-icons-rev path {
+    fill: #07C470; /* Change the color of specific parts of the icon */
+}
+
+.user-numbers {
+    font-size: 30px;
+    font-weight:600;
+}
+
+.last-updated {
+    font-weight: 400;
+    font-size: 12px;
+    color: #868B8E;
+}
+.card-desc {
+    display: flex;
+    flex-direction:column;
+    flex: 3;
+}
+.numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.user-trends {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.new-numbers {
+    margin-left: 10px;
+    font-size: 15px;
+    align-items: center;
+    color: #868B8E;
+}
+
+.user-trend {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.green {
+    color: #07C470;
+}
+
+.red {
+    color: #EC1713;
 }
