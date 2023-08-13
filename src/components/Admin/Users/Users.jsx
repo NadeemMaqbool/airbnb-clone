@@ -4,7 +4,10 @@ import './Users.css'
 import { useEffect, useState } from "react"
 const Users = () => {
     const [users, setUsers] = useState(null)
-    
+    const headers = [
+        "First Name", "Last Name", "Email", "Status"
+    ]
+
     useEffect(() => {
         const getUsers = async () => {
             try {
@@ -36,7 +39,7 @@ const Users = () => {
                 <Link to="/admin/users/new" className="btn btn-new">New User</Link>
             </div>
            
-           <Table  users={users} />
+           <Table  data={users} headers={headers}/>
         </div>
 )}
 

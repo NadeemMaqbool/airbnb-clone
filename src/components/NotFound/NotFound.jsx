@@ -1,8 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import notFound from "../../assets/404.jpg"
 import './notFound.css'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 const NotFound = () => {
+
+  const {user} = useAuthContext()
+
   return (
     <div className='not-found'>
       <div className='img-cont'>
@@ -10,7 +14,11 @@ const NotFound = () => {
       </div>
       <div className='redirect'>
         <h3> The page you are looking for is not found</h3>
-        <NavLink to="/admin" className="btn"> Dashboard </NavLink>
+        <NavLink 
+          to={user ? "/admin" : "/"}
+          className="btn"
+        > Go Back 
+        </NavLink>
       </div>
     </div>
 

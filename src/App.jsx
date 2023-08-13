@@ -3,8 +3,6 @@ import Content from "./components/partials/Content";
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Routes, 
-  BrowserRouter ,
   Route,
   RouterProvider
 } from 'react-router-dom';
@@ -20,7 +18,8 @@ import NewUser from "./components/Admin/Users/NewUser";
 import AdminLayout from "./layouts/AdminLayout"
 import PublicLayout from "./layouts/PublicLayout"
 import NotFound from "./components/NotFound/NotFound.jsx";
-
+import Hotels from "./components/Admin/Hotels/Hotels";
+import NewHotel from "./components/Admin/Hotels/NewHotel";
 
 function App() {
   const {user} = useAuthContext();
@@ -34,6 +33,8 @@ function App() {
         />
         <Route path="admin/users" element={<Users />} />
         <Route path="admin/users/new" element={<NewUser />} />
+        <Route path='/admin/hotels' element={<Hotels />} />
+        <Route path='/admin/hotels/new' element={<NewHotel />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>
@@ -47,7 +48,7 @@ function App() {
         <Route path = "/place/:id" element={<PlaceDetails />} />
         <Route path='/signin' element={<Login />} className="nav-group-item" />
         <Route path='/signup' element={<Register />} className="nav-group-item" />
-
+        
         <Route path="*" element={<NotFound />} />
       </Route>
     )

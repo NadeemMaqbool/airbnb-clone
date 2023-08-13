@@ -45,6 +45,7 @@
     border: 1px solid var(--main-button-color);
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
 }
 
 .form-heading {

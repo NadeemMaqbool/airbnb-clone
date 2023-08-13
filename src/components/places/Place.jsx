@@ -1,8 +1,7 @@
 import "./Place.css";
-import { FaHeart, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 
-import imgPlace from "../../assets/img1.jpg";
 const Place = (...place) => {
   const {_id, title, description, image_url, amenities, rooms_data} = place[0].place;
   

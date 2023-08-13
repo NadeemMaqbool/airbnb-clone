@@ -2,9 +2,10 @@
     padding: 9px 10px;
     display: block;
     font-size: 13px;
-    background: #ffd4d4;
-    color: #ba4141;
-    border: 1.5px solid #faacac;
+    font-weight: 500;
+    background: #FCE5EA;
+    color: #C91539;
+    border: 1.5px solid #FCE5EA;
     width: 250px;
     margin-bottom: 12px;
     text-align: center;

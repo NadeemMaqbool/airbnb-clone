@@ -17,12 +17,6 @@ const Login = () => {
     await SignIn({email, password})
   };
 
-  useEffect(() => {
-    if (user) {
-      navigate("/admin")
-    }
-  }, [user])
-
   return (
     <>
      <div className="auth-container">

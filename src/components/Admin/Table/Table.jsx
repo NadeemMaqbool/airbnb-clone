@@ -3,9 +3,9 @@ import "./Table.css"
 import {CiTrash, CiEdit} from "react-icons/ci"
 
 const Table = (props) => {
-  const { users } = props
+  const { data, headers } = props
 
-  if (!users) return null; // Added return value for the condition
+  if (!data) return null; // Added return value for the condition
 
   const deleteUser = (userId) => {
     console.log(userId)
@@ -20,16 +20,17 @@ const Table = (props) => {
       <table>
         <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Status</th>
+            {
+              headers && headers.map((item) => (
+                <th>{item}</th>
+              ))
+            }
             <th className='action-header'>Actions</th>
           </tr>
         </thead>
         <tbody>
           {
-            users && users.map((user, index) => (
+            data && data.map((user, index) => (
               <tr key={index}> 
                 <td className="main-item">{user.first_name}</td>
                 <td>{user.last_name}</td>

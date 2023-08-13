@@ -1,0 +1,30 @@
+.response {
+    width: 100%;
+}
+
+.error {
+    padding: 9px 10px;
+    display: block;
+    font-size: 13px;
+    background: #FEE3E9;
+    color: #DC0546;
+    border: 1.5px solid #FEE3E9;
+    width: 98%;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+  
+.success {
+    padding: 9px 10px;
+    display: block;
+    font-size: 13px;
+    background: #CCF8F0;
+    color: #18AC92;
+    border: 1.5px solid #CCF8F0;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 600;
+    width: 98%;
+}
