@@ -1,0 +1,9 @@
+.alert-section {
+    margin-top:10px;
+}
+
+.active>.page-link {
+    color: var(--ext-light-color);
+    background-color: var(--main-button-color);
+    border: 1px solid var(--main-button-color);
+}

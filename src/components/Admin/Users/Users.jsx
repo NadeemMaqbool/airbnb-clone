@@ -36,7 +36,7 @@ const Users = () => {
         <div className="container-user">
             <div className="table-title">
                 <p className="page-title"> Users</p>
-                <Link to="/admin/users/new" className="btn btn-new">New User</Link>
+                <Link to="/admin/users/new" className="btn btn-primary">New User</Link>
             </div>
            
            <Table  data={users} headers={headers}/>

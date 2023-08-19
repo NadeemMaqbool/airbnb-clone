@@ -1,27 +1,36 @@
 import { useState, useEffect } from 'react';
 
-const useGetHotels = () => {
-  const [hotels, setHotels] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const PAGES_PER_PAGE = 10;
 
+const useGetHotels = (props) => {
+  const [hotels, setHotels] = useState([]);
+  const [totalPages, setTotalPages] = useState(0)
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [page, setPage] = useState(1)
+  const limit = PAGES_PER_PAGE
+  
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/places'); // Adjust the URL accordingly
+        setLoading(true)
+        const response = await fetch(`http://localhost:8080/api/places?page=${page}&limit=${limit}`);
         const data = await response.json();
-        setHotels(data);
-        setLoading(false);
+        
+        let total = Math.ceil(data.total/PAGES_PER_PAGE)
+
+        setHotels(data.records);
+        setTotalPages(total)
       } catch (err) {
         setError(err);
-        setLoading(false);
       }
+      setLoading(false);
     };
 
     fetchHotels();
-  }, []);
+  }, [page]);
 
-  return { hotels, loading, error };
+  return { hotels, loading, error, totalPages, page, setPage };
 };
 
 export default useGetHotels;

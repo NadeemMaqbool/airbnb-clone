@@ -1,7 +1,9 @@
 .table-container {
-    padding: 5px;
-    color: #505763;
-    font-size: 13px;
+  color: #505763;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-height: 444px;
+  border: 1px solid #ccc;
 }
 
 table {
@@ -16,6 +18,10 @@ table {
     padding: 8px;
     min-height: 40px;
     max-height: 100px;
+  }
+
+  tr:nth-child(10) td {
+    border-bottom: none;
   }
 
 .table-row {

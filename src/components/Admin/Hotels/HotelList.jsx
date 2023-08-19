@@ -5,13 +5,19 @@ import moment from "moment"
 import "../Table/Table.css"
 import "./Hotel.css"
 import useGetHotels from "../../../hooks/useGetHotels"
+import Alert from "../../Modals/Alerts/Alert"
+import PaginationBasic from "../../Pagination/PaginationBasic"
+import SpinnerListing from "../../Loader/SpinnerListing"
+
 
 const HotelList = (props) => {
+  const hotelRecords = useGetHotels();
 
-  let {hotels} = useGetHotels()
-  const [places, setPlaces] = useState(hotels)
+  const [places, setPlaces] = useState()
+  const [show, setShow] = useState(false);
+  const [selectedId, setSelectedId] = useState("")
+  const {page, setPage, totalPages, loading} = hotelRecords
   let { headers } = props
-  
   const [success, setSuccess] = useState("")
   const [error, setError] = useState("")
   const {user} = useAuthContext()
@@ -27,12 +33,15 @@ const HotelList = (props) => {
       })
 
       const success = await response.json()
-      
-      if (success) {
+      if (success.message) {
         setSuccess(success.message)
         const newPlaces = places.filter(place => place._id !== hotelId)
         setPlaces(newPlaces)
-      }  
+      } else {
+        setError(success.error)
+        console.error("Error while deleting", success.error)  
+      }
+      setShow(false)
     } catch (err) {
       setError(success.error)
       console.error("Error ", err)
@@ -48,61 +57,88 @@ const HotelList = (props) => {
     return dateObj
   }
 
+  const handleShow = (hotelId) => {
+    setShow(true)
+    setSelectedId(hotelId)
+  };
+
   useEffect(() => {
-    setPlaces(hotels)
-  }, [hotels])
+      setPlaces(hotelRecords.hotels);
+  }, [hotelRecords])
   
   return (
-    <div className="table-container">
-      <div className="response">
-        {
-          success && <p className="success">Hotel has been deleted successfully!</p>
-        }
-        {
-          error && <p className="error">Hotel has been deleted successfully!</p>
+    <section>
+      <div className="table-container">
+        <div className="response">
+          {
+            success && <p className="success">Hotel has been deleted successfully!</p>
+          }
+          {
+            error && <p className="error">Hotel has been deleted successfully!</p>
+          }
+        </div>
+        { !loading ?
+          <table>
+            <thead>
+              <tr key="12343">
+                {
+                  headers && headers.map((item) => (
+                    <th>{item}</th>
+                  ))
+                }
+                <th className='action-header'>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                places && places.map((hotel) => (
+                  <tr key={hotel._id}> 
+                    <td className="main-item">
+                      <img src={hotel.image_url} alt="hotel img" className="small-img"/>
+                    </td>
+                    <td>{hotel.title}</td>
+                    <td>{hotel.description}</td>
+                    <td>{hotel.city}</td>
+                    <td>{hotel.country}</td>
+                    <td>{hotel.address}</td>
+                    <td>{formatDate(hotel.created_at)}</td>
+                    
+                    <td className='actions'>
+                        <button
+                          onClick={() => handleShow(hotel._id)}
+                          className='action-btn'>
+                            <CiTrash size={18} className='action-del' />
+                        </button>
+                        
+                        <button onClick={() => editHotel(hotel._id)} className='action-btn'>
+                            <CiEdit size={20} className='action-edit'/>
+                        </button>                    
+                    </td>
+                  </tr>
+                ))
+              }
+
+            </tbody>
+          </table>
+          
+          : <SpinnerListing />
         }
       </div>
-      <table>
-        <thead>
-          <tr key="fuckoff123">
-            {
-              headers && headers.map((item) => (
-                <th>{item}</th>
-              ))
-            }
-            <th className='action-header'>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            places && places.map((hotel, index) => (
-              <tr key={hotel._id}> 
-                <td className="main-item">
-                  <img src={hotel.image_url} alt="hotel img" className="small-img"/>
-                </td>
-                <td>{hotel.title}</td>
-                <td>{hotel.description}</td>
-                <td>{hotel.city}</td>
-                <td>{hotel.country}</td>
-                <td>{hotel.address}</td>
-                <td>{formatDate(hotel.created_at)}</td>
-                
-                <td className='actions'>
-                    <button onClick={() => deleteHotel(hotel._id)}  className='action-btn'>
-                        <CiTrash size={18} className='action-del' />
-                    </button>
-                    
-                    <button onClick={() => edithotel(hotel._id)} className='action-btn'>
-                        <CiEdit size={20} className='action-edit'/>
-                    </button>                    
-                </td>
-              </tr>
-            ))
-          }
-
-        </tbody>
-      </table>
-    </div>
+      <PaginationBasic 
+        total={totalPages} 
+        page={page} 
+        setPage={setPage} 
+      />     
+      
+      <Alert 
+        showButton={handleShow}
+        show={show}
+        setShow={setShow}
+        deleteHotel={deleteHotel}
+        selectedHotel={selectedId}
+        title="hotel"
+      />
+    </section>
   )
 }
 

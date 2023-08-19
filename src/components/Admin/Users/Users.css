@@ -44,15 +44,17 @@
     font-size:14px;
     text-align: center;
     margin-bottom:10px;
+    gap: 2rem;
 }
 
 .form-item input {
     border-radius: 5px;
     font-size:13px;
+    width:300px;
 }
 
 .form-item label {
-    width:100px;
+    width:150px;
     padding: 10px 20px
 }
 
@@ -81,11 +83,16 @@
     box-shadow: -1px 0px 22px -15px rgba(0,0,0,0.75); */
 }
 
-.form-select {
+.form-selects-item {
     display: flex;
     align-items: center;
 }
 
+.form-selects-item input{
+    width: 45px !important;
+}
+
 .radio {
     vertical-align: middle;
+    width: 25px;
 }

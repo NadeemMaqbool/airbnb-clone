@@ -9,6 +9,7 @@ const NewHotel = () => {
     address: "",
     city: "",
     country: "",
+    image_url: ""
   });
 
   const navigate = useNavigate()
@@ -101,6 +102,18 @@ const NewHotel = () => {
                 value={formData.description}
                 onChange={handleFormDataChanges}
                 placeholder="Description"
+            />
+          </div>
+{/* TODO: Later this should be replaced with a more generic function of file upload // */}
+          <div className="form-item">
+            <label htmlFor="image_url">Image Url</label>
+            <input 
+                name="image_url" 
+                type="text" 
+                className="form-control"
+                value={formData.image_url}
+                onChange={handleFormDataChanges}
+                placeholder="Image Url"
             />
           </div>
 

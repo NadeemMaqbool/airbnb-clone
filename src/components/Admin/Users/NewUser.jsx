@@ -27,7 +27,7 @@ const NewUser = () => {
           <div className="form-item">
 
             <label htmlFor="status">Active</label>
-            <div className="form-select">
+            <div className="form-selects-item">
               <label>Yes
                 <input name="status" type="radio"  value="Yes" className="radio"/>
               </label>

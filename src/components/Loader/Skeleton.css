@@ -13,7 +13,6 @@
     height: 175px;
     background-color: #FFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 
     opacity: 0.2;
 }
 
@@ -81,4 +80,22 @@
 
 .animate-pulse {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.spinner-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.spinner-position {
+    margin-top: 50px;
+    opacity: none !important;
+}
+
+.spinner-content span {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
