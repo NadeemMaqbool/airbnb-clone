@@ -13,10 +13,9 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 150px;
+    height: 200px;
     
     font-size: 1.1rem;
-    color: var(--main-font-color);
 }
 
 
@@ -27,7 +26,7 @@
 
 .places-list__item a {
     text-decoration: none;
-    color: var(--main-font-color);
+    color: var(--headings-font-color);
 }
 
 .places-list__item a:hover {
@@ -35,13 +34,13 @@
 }
 
 .places-list__item__image {
-    width: 32%;
-    height: 5%;
+    width: 42%;
+    height: 8%;
 }
 
 .places-list_img {
     width: 100%;
-    height: 145px;
+    height: 200px;
     padding: 2px;
     border-radius: 8px;
 }
@@ -72,8 +71,14 @@
 
 .places-list__item__info__detail {
     font-size: 0.75rem;
-    color: var(--headings-font-color);
+    color: var(--main-font-color);
     font-weight: 400;
+}
+
+.places-list__item__info__detail_address {
+    font-size: 0.8rem;
+    color: var(--headings-font-color);
+    font-weight: 500;
 }
 
 .places-list__item__info__perks{
@@ -91,9 +96,25 @@
     font-size: 0.8rem;
     font-weight: 300;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
 }
 
+.place-rating-words {
+    font-weight: 500;
+}
+
+.place-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.place-total-reviews {
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--main-font-color)
+}
 .place-list__item__subinfo__price {
     font-size: 1.3rem;
     font-weight: 700;
@@ -113,4 +134,29 @@
     font-size: 0.8rem;
     font-weight: 300;
     color: #303646;
+}
+
+.place-rating {
+    padding: 3px 8px;
+    background-color: #34803E;
+    color: white;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.places-list__extra-info p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #34803E;
+}
+
+.place-discount-signup {
+    font-size: 12px;
+    background:#FFD700;
+    padding: 6px 7px;
+    border-radius: 5px;
+    font-weight: 600;
 }

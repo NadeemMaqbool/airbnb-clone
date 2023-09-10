@@ -18,6 +18,7 @@ table {
     padding: 8px;
     min-height: 40px;
     max-height: 100px;
+    margin-bottom: none;
   }
 
   tr:nth-child(10) td {
@@ -46,7 +47,7 @@ table {
 }
 
 .main-item {
-  font-weight: 600;
+  width: 50px;
 }
 
 .actions {
@@ -56,6 +57,9 @@ table {
   align-items: center;
   gap:10px;
   width: 100px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
 }
 
 .action-header {

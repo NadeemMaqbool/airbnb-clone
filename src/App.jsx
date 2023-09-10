@@ -1,5 +1,4 @@
 import "./App.css";
-import Content from "./components/partials/Content";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -20,6 +19,8 @@ import PublicLayout from "./layouts/PublicLayout"
 import NotFound from "./components/NotFound/NotFound.jsx";
 import Hotels from "./components/Admin/Hotels/Hotels";
 import NewHotel from "./components/Admin/Hotels/NewHotel";
+import NewAmenity from "./pages/Amenities/NewAmenity"
+import Amenities from "./pages/Amenities/Amenities"
 
 function App() {
   const {user} = useAuthContext();
@@ -35,6 +36,8 @@ function App() {
         <Route path="admin/users/new" element={<NewUser />} />
         <Route path='/admin/hotels' element={<Hotels />} />
         <Route path='/admin/hotels/new' element={<NewHotel />} />
+        <Route path='/admin/amenities' element={<Amenities />} />
+        <Route path='/admin/amenities/new' element={<NewAmenity />} />
 
         <Route path="*" element={<NotFound />} />
       </Route>

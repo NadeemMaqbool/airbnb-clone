@@ -34,7 +34,7 @@ body {
     justify-content: center;
     width: 100%;
     background-color: #fff;
-    position: absolute;
+    position: relative;
     top: 105px;
     border-radius: 10px;
 }
@@ -43,9 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  background-color: #ccc;
-  height: 45px;
+  width: 100%;  
 }
 
 .content-admin {

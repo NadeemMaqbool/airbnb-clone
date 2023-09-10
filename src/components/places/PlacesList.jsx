@@ -3,7 +3,6 @@ import Loader from "../Loader/Loader.jsx";
 
 const PlaceList = (props) => {
   const {places} = props
-
   return (
     <div className="places-container">
       {

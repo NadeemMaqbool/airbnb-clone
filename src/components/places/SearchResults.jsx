@@ -1,26 +1,32 @@
 import "./Places.css";
 import PlaceList from "./PlacesList";
 import {useState, useEffect} from 'react'
-import axios from 'axios'
 import Loading from '../Loader/Loader.jsx'
+import useGetHotels from "../../hooks/useGetHotels"
+import axios from 'axios'
 
-const SearchResults = (props) => {
-  const {places, setPlaces} = props
+const SearchResults = () => {
+  const hotelRecords = useGetHotels();
+  const [places, setPlaces] = useState()
+  
+  // useEffect(() => {
+  //   const getPlaces = async () => {
+  //     await axios.get("http://localhost:8080/api/places")
+  //       .then(
+  //         (response) => { 
+  //           const data = response.data
+  //           places?.length > 0 ? setPlaces(...places, data) : setPlaces(data)
+  //         })
+  //       .catch(err => {
+  //         console.log(err)
+  //       })
+  //     }
+  //   getPlaces()
+  // }, [])
   
   useEffect(() => {
-    const getPlaces = async () => {
-      await axios.get("http://localhost:8080/api/places")
-        .then(
-          (response) => { 
-            const data = response.data
-            places?.length > 0 ? setPlaces(...places, data) : setPlaces(data)
-          })
-        .catch(err => {
-          console.log(err)
-        })
-      }
-    getPlaces()
-  }, [])  
+    setPlaces(hotelRecords.hotels);
+}, [hotelRecords])
 
   return (
     <div className="search-list">

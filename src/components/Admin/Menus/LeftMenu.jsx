@@ -1,11 +1,12 @@
 import { SpaceCompactItemContext } from "antd/es/space/Compact"
 import "./LeftMenu.css"
-import {FiUsers} from "react-icons/fi"
-import {FiKey} from "react-icons/fi"
-import {FiHome} from "react-icons/fi"
-import {FaChartSimple} from "react-icons/fa6"
-import {NavLink} from "react-router-dom"
+import { FiUsers } from "react-icons/fi"
+import { FiKey } from "react-icons/fi"
+import { FiHome } from "react-icons/fi"
+import { FaChartSimple } from "react-icons/fa6"
+import { BiDrink } from "react-icons/bi";
 
+import {NavLink} from "react-router-dom"
 
 
 const LeftMenu = () => {
@@ -38,6 +39,12 @@ const LeftMenu = () => {
           <span className="list-item-text">
             <NavLink to="/admin/hotels" className="link"> Hotels </NavLink>
             </span>
+        </li>
+        <li className="list-item">
+          <BiDrink />
+          <span className="list-item-text">
+            <NavLink to="/admin/amenities" className="link"> Amenities </NavLink>
+          </span>
         </li>
       </ul>
     </div>

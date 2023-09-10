@@ -1,10 +1,10 @@
 .search-list {
     padding: 0;
     margin: 0;
-    width: 90%;
+    width: 100%;
     position: absolute;
     top:170px;
-    max-width: 72%;
+    max-width: 98%;
     display: flex;
     flex-direction: row;
 }
@@ -18,7 +18,7 @@
 }
 
 .filter-side {
-    width: 35%;
+    width: 40%;
 }
 
 .search-results {

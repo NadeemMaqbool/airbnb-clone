@@ -3,7 +3,7 @@ import Hotel from "./Hotel";
 import { useParams } from "react-router-dom";
 const PlaceDetails = () => {
   const {id} =  useParams()
-  console.log(id)
+  
   return (
     <>
       <Content />

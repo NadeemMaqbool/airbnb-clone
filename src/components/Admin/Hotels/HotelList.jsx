@@ -68,8 +68,7 @@ const HotelList = (props) => {
   
   return (
     <section>
-      <div className="table-container">
-        <div className="response">
+      <div className="response">
           {
             success && <p className="success">Hotel has been deleted successfully!</p>
           }
@@ -77,6 +76,8 @@ const HotelList = (props) => {
             error && <p className="error">Hotel has been deleted successfully!</p>
           }
         </div>
+      <div className="table-container">
+        
         { !loading ?
           <table>
             <thead>
@@ -94,7 +95,7 @@ const HotelList = (props) => {
                 places && places.map((hotel) => (
                   <tr key={hotel._id}> 
                     <td className="main-item">
-                      <img src={hotel.image_url} alt="hotel img" className="small-img"/>
+                      <img src={hotel.imageUrl} className="small-img"/>
                     </td>
                     <td>{hotel.title}</td>
                     <td>{hotel.description}</td>

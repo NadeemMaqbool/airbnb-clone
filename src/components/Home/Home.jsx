@@ -5,7 +5,6 @@ import SearchResults from "../../components/places/SearchResults";
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -13,10 +12,7 @@ const Home = () => {
        places={data} 
        setPlaces={setData}
       />
-      <SearchResults
-        places={data}
-        setPlaces={setData}
-      />
+      <SearchResults />
     </>
   );
 };
